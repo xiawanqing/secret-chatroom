@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.css">
+    <link rel="stylesheet" href="public/css/style.css">
+</head>
+<body>
+<template id="main">
+    <v-ons-page>
+        <v-ons-toolbar>
+            <div class="center">{{ title }}</div>
+            <div class="right">
+                <v-ons-toolbar-button>
+                    <v-ons-icon icon="ion-navicon, material: md-menu"></v-ons-icon>
+                </v-ons-toolbar-button>
+            </div>
+        </v-ons-toolbar>
+
+        <p style="text-align: center">
+            <v-ons-button @click="$ons.notification.alert('Hello World!')">
+                Click me!
+            </v-ons-button>
+        </p>
+        <v-ons-row>
+            <v-ons-col class="col-8">
+                <div class="menu-block"></div>
+            </v-ons-col>
+            <v-ons-col class="col-4">
+                <div class="menu-block"></div>
+            </v-ons-col>
+        </v-ons-row>
+    </v-ons-page>
+</template>
+
+<div id="app"></div>
+
+<script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue-resource@1.3.4"></script>
+<script src="https://unpkg.com/vue-onsenui/dist/vue-onsenui.js"></script>
+<script src="resources/js/app.js"></script>
+</body>
+</html>

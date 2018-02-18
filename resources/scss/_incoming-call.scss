@@ -1,0 +1,97 @@
+.call-name-block
+{
+  color: white;
+  height: 40%;
+  text-align: center;
+  font-size: 2rem;
+  background-color: rgba(0,100,0,0.5);
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.avatar-circle
+{
+  width: 100px;
+  height: 100px;
+  background: white;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+}
+
+.phone-circle
+{
+  width: 70px;
+  height: 70px;
+  background: white;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  margin: 10px;
+}
+
+@keyframes calling{
+  from{
+      background: rgba(255,255,255,.1);
+  }to{
+     background: rgba(255,255,255,.9);
+   }
+}
+
+@keyframes calling2{
+  from{
+    width: 70px;
+    height: 70px;
+  }
+  to{
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@keyframes declined{
+  to{
+    -webkit-filter: grayscale(0.1) blur(1px) drop-shadow(0px 0px 1px rgba(0,0,0,.7));
+    -moz-filter: grayscale(0.1) blur(1px) drop-shadow(0px 0px 1px rgba(0,0,0,.7));
+    opacity: .5;
+  }
+}
+@keyframes go{
+  0%{
+    opacity: .5;
+  }
+  95%{
+    transform: scale(.2);
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+.call-status{
+  width: 30%;
+  margin: 1rem auto;
+  position: relative;
+  overflow: hidden;
+  color: white;
+  text-align: center;
+  .circle{
+    float: left;
+    margin-right: 15px;
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    background: rgba(255,255,255,.1);
+    animation: calling 1s backwards infinite;
+    @for $i from 1 through 5{
+      &:nth-child(#{$i}){
+        animation-delay: $i * 0.2  + s;
+      }
+    }
+    &.last{
+      margin-right: 0;
+    }
+  }
+}

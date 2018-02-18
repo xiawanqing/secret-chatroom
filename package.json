@@ -1,0 +1,33 @@
+{
+  "name": "secret-chatroom",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "express": "^4.16.2",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^3.0.0",
+    "gulp-less": "^3.3.2",
+    "gulp-minify": "^2.1.0",
+    "gulp-scss": "^1.4.0",
+    "vue": "^2.5.13",
+    "vue-router": "^3.0.1"
+  },
+  "devDependencies": {
+    "laravel-mix": "^1.7.2",
+    "node-sass": "^4.7.2",
+    "sass": "^1.0.0-beta.4",
+    "vue-router": "^3.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "hot": "NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "author": "Lilian Sun",
+  "license": "ISC",
+  "keywords": [],
+  "description": ""
+}
